@@ -4,71 +4,410 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="email.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="email.css">
-    </head>
-</head>
+     
+        </head>
 
-<body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown link
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+        <body>
+            <header>
+
+            <!--This is where the navigation bar will go-->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid justify-content-around">
+                <a class="navbar-brand logo m-0 p-0 me-3" href="#">
+                    <img src="Assets/circus_1.gif" alt="logo" width="100px">
+                </a>
+                <!-- logo name collapses and expands based on breakpoint -->
+                <ul class="navbar-nav d-none d-md-block">
+                    <li>
+                        <h3>Flying Circus Email</h3>
                     </li>
                 </ul>
+                <form class="d-flex" role="search" id="form">
+                   
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
-        </div>
-    </nav>
-</div>
-<div class="container-fluid my-container">
-    <div class="row my-row">
-        <div class="col offcanvas-md offcanvas-start col-md-2 col-xl-2 sidebar">1</div>
-        <div class="col my-col">2</div>
-        <div class="col my-col">3</div>
-    
-    
-    </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"></script>
-            <!-- Meatball menu-->
-</body>
+        </nav>
+               
+                
+               
+            </header>
+       
+            <!--Grid----------------------------------------------------------------------------------------->
+            
 
-</html>
+        <div class="container">
+       
+            
+            <div class="d-flex">
+                <div class="black-border1 col-5 col-sm-5 col-md-4 col-lg-2">
+                    
+                    
+                    <div class="row e">
+                        <div class="d-flex flex-column justify-content-around m-0 py-5 sidebar">
+                            <button type="button" class="btn btn-success d-xl-flex" id="side-buttons" data-bs-toggle="offcanvas" data-bs-target="#email-new"><i
+                                    class="fa-solid fa-pencil"></i> Compose</button><br><br>
+                            
+                            
+                            <div class="container-fluid d-flex">
+                                <div class="row">
+                                    <div class="col data-bs-toggle">
+                                        <button class="col d-flex btn btn-info" id="side-buttons">Inbox</button><br>
+                                        <button class="d-flex btn btn-info" id="side-buttons" >Draft</button><br>
+                                        <button class="d-flex btn btn-info" id="side-buttons">Spam</button><br>
+                                        <button class="d-flex btn btn-info" id="side-buttons">Trash</button><br>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                           
+                    
+                    
+                    
+                        </div>
+                    </div>
+                       
+                       
+                        
+
+                    
+                </div>
+                
+                <!-- MESSAGE STREAM -->
+                <div class="col flex-grow-2 email-stream p-3  col-6 col-xs-none col-sm-9 col-md-8 col-lg-4">
+                    <!-- Compose Button -->
+                    <div class="container position-absolute bottom-0 start-0 translate-middle-y">
+                        <div class="row">
+                            <div class="col d-xl-none">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container message-stream">
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2  ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2 ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2  ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2 ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2  ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2 ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2  ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col email-select-container">
+                                <div class="container email-select mt-2 mb-2 ">
+                                    <div class="row">
+                                        <!-- sender -->
+                                        <div class="col-8">
+                                            <h5>SENDER</h5>
+                                        </div>
+                                        <!-- time/date -->
+                                        <!-- time/date drops below Sender line on Md and larger viewport's -->
+                                        <div class="col-2 col-md-5">
+                                            <h7>TIME/DATE</h7>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- subject matter -->
+                                        <div class="coloumn" id="subjectmatter">
+                                            <h3>SUBJECT MATTER</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+
+            
+            
+            <!----3rd column-->
+            
+         
+               
+                
+            <!-- READ EMAIL -->
+            <div class="col col-xl-6 d-none d-xl-block email-read pt-4 ">
+                <div class="d-flex flex-column">
+                    <div class="container">
+                        <div class="row">
+                            <!-- sender -->
+                            <div class="col-8">
+                                <h5>SENDER</h5>
+                            </div>
+                            <!-- time/date -->
+                            <!-- time/date drops below Sender line on Md and larger viewport's -->
+                            <div class="col-2 col-md-5">
+                                <h7>TIME/DATE</h7>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- subject matter -->
+                            <div class="coloumn">
+                                <h3>SUBJECT MATTER</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada mi lectus, vitae
+                            condimentum felis imperdiet ac. Proin et quam in nulla pellentesque semper sollicitudin quis
+                            nulla. In condimentum massa id mi porta, egestas ultricies diam venenatis.</p>
+                        <p>Sed eu nisi consequat, volutpat velit in, sagittis arcu. Aenean porta elementum ipsum. Ut vel
+                            ligula nulla. Nam id laoreet sem, quis sodales massa. Pellentesque bibendum tortor eu ex
+                            viverra, vitae mollis mi congue. Duis porta eleifend arcu, eu lacinia enim semper facilisis.
+                            Vivamus a iaculis metus, ac molestie sem. Pellentesque varius, turpis eget scelerisque
+                            molestie, nibh odio varius dui, vitae rutrum est tortor vitae nibh.</p>
+                        <p>sodales consequat cursus. Etiam pharetra felis eget consequat aliquet. Vestibulum vitae arcu
+                            mauris. Donec sit amet tincidunt turpis. Vestibulum at urna ut libero placerat accumsan.
+                            Nunc consectetur sodales nisi vitae egestas. Morbi tristique eleifend arcu a sodales. Etiam
+                            nec risus urna. Aliquam mollis nisi vel tellus pharetra dapibus. Integer eget est ligula.
+                        </p>
+                    </div>
+        <!-- RESPOND TO EMAIL -->
+        <form>
+            <label for="email-respond" class="form-label ps-3">Respond</label>
+            <textarea id="email-respond" name="respond" class="form-control" placeholder="Reply..." rows="5"></textarea>
+            <div class="d-flex flex-row-reverse me-4">
+                <button class="email-respond-button" type="submit">SEND</button>
+            </div>
+        </form>
+            
+        
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+        </body>
+
+        </html>
